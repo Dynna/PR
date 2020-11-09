@@ -20,21 +20,27 @@ namespace UDPServer
 
             while (true)
             {
-                var buffer = new byte[256];
-                var size = 0;
-                var data = new StringBuilder();
-                EndPoint senderEndPoint = new IPEndPoint(IPAddress.Any, 0);
+               var buffer = new byte[256];
+               var size = 0;
+               var data = new StringBuilder();
+               EndPoint senderEndPoint = new IPEndPoint(IPAddress.Any, 0);
 
-                do
-                {
-                    size = udpSocket.ReceiveFrom(buffer, ref senderEndPoint);
-                    data.Append(Encoding.UTF8.GetString(buffer));
-                }
-                while (udpSocket.Available > 0);
+               do
+               {
+                 size = udpSocket.ReceiveFrom(buffer, ref senderEndPoint);
+                 data.Append(Encoding.UTF8.GetString(buffer));
+               }
+               while (udpSocket.Available > 0);
 
-                udpSocket.SendTo(Encoding.UTF8.GetBytes("Message received!"), senderEndPoint);
-
-                Console.WriteLine(data);
+               try 
+               { 
+                    udpSocket.SendTo(Encoding.UTF8.GetBytes("Message received!"), senderEndPoint);
+                    Console.WriteLine(data);
+               }
+               catch(SystemException e)
+               {
+                    Console.WriteLine("Error while sending packets!" + e);
+               }
             }
         }
     }
