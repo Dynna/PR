@@ -1,0 +1,13 @@
+C:\Users\User\source\repos\UDPServer\bin\Debug\netcoreapp3.1\UDPServer.exe
+C:\Users\User\source\repos\UDPServer\bin\Debug\netcoreapp3.1\UDPServer.deps.json
+C:\Users\User\source\repos\UDPServer\bin\Debug\netcoreapp3.1\UDPServer.runtimeconfig.json
+C:\Users\User\source\repos\UDPServer\bin\Debug\netcoreapp3.1\UDPServer.runtimeconfig.dev.json
+C:\Users\User\source\repos\UDPServer\bin\Debug\netcoreapp3.1\UDPServer.dll
+C:\Users\User\source\repos\UDPServer\bin\Debug\netcoreapp3.1\UDPServer.pdb
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.csprojAssemblyReference.cache
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.AssemblyInfo.cs
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.dll
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.pdb
+C:\Users\User\source\repos\UDPServer\obj\Debug\netcoreapp3.1\UDPServer.genruntimeconfig.cache
