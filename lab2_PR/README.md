@@ -1,6 +1,6 @@
-status: Work in progress
+### status: Work in progress
 
-lab2_PR Project is based on the following requirements:
+### lab2_PR Project is based on the following requirements:
 
 * Implement a protocol atop UDP, with error checking and retransmissions. Limit the number of retries for retransmission.
 * Make the connection secure, using either a CA to get the public key of the receiver and encrypt data with it, or using Diffie-Helman to get a shared connection key between client and server, ensure that the traffic is encrypted.
