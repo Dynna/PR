@@ -1,12 +1,20 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace UDPClient
 {
-    class Program
+    public class Program
     {
+        public static DiffieHellman client = new DiffieHellman();
+
+        public static byte[] clientPublicKey = client.PublicKey;
+
+        public static byte[] clientIV = client.IV;
+
         static void Main(string[] args)
         {
             Console.Title = "CLIENT";
@@ -23,10 +31,13 @@ namespace UDPClient
                 Console.WriteLine("Type something:");
                 var message = Console.ReadLine();
 
-                var serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8081);
-                udpSocket.SendTo(Encoding.UTF8.GetBytes(message), serverEndPoint);
+                byte[] encryptedMessage = client.Encrypt(UDPServer.Program.serverPublicKey, message);
 
-                var buffer = new byte[256];
+                char[] sentMessage = Encoding.Unicode.GetChars(encryptedMessage);
+                var serverEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8081);
+                udpSocket.SendTo(Encoding.UTF8.GetBytes(sentMessage), serverEndPoint);
+
+                var buffer = new byte[1600];
                 var size = 0;
                 var data = new StringBuilder();
                 EndPoint senderEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8081);
@@ -41,6 +52,21 @@ namespace UDPClient
                 Console.WriteLine(data);
                 Console.ReadLine();
             }
+        }
+
+        public static DiffieHellman Client
+        {
+            get { return client; }
+        }
+
+        public static byte[] ClientPublicKey
+        {
+            get { return clientPublicKey; }
+        }
+
+        public static byte[] ClientIV
+        {
+            get { return clientIV; }
         }
     }
 }
