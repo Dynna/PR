@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2_PR", "lab2_PR.csproj", "{6BE1F075-1754-46D4-B317-6542F05AA117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab2_PR", "lab2_PR.csproj", "{6BE1F075-1754-46D4-B317-6542F05AA117}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{C296589E-16E3-4A48-A624-0E7B64055696}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPServer", "..\UDPServer\UDPServer.csproj", "{A01653D6-AFFE-42C3-AFC6-27E71817FCC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDPServer", "..\UDPServer\UDPServer.csproj", "{A01653D6-AFFE-42C3-AFC6-27E71817FCC3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{30B79B69-1085-4057-A057-31F2D1E5D863}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPClient", "..\UDPClient\UDPClient.csproj", "{D5EE304A-227C-4A50-8F0A-A8D1E4036C34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDPClient", "..\UDPClient\UDPClient.csproj", "{D5EE304A-227C-4A50-8F0A-A8D1E4036C34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureKeyExchange.Tests", "..\UnitTest\SecureKeyExchange.Tests.csproj", "{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{D5EE304A-227C-4A50-8F0A-A8D1E4036C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5EE304A-227C-4A50-8F0A-A8D1E4036C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5EE304A-227C-4A50-8F0A-A8D1E4036C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
