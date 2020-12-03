@@ -20,14 +20,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ErrorChecking", "ErrorCheck
 		ErrorChecking.cs = ErrorChecking.cs
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ATM_Machine", "ATM_Machine", "{C798542E-0174-4DB6-9FA7-AE0E4483F23E}"
-	ProjectSection(SolutionItems) = preProject
-		AtmMachine.cs = AtmMachine.cs
-		AtmStateMachine.cs = AtmStateMachine.cs
-		HasDebitCardState.cs = HasDebitCardState.cs
-		NoDebitCardState.cs = NoDebitCardState.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
