@@ -7,11 +7,8 @@ namespace UnitTest
     {
         static void Main(string[] args)
         {
-            string e = DiffieHellmanTests.msg;
-
-            Console.WriteLine(e);
-
-            Console.WriteLine("Hello World!");
+           // Console.WriteLine("Hello World!");
+            
         }
     }
 }
