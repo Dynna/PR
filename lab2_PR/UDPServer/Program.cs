@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 
@@ -27,7 +29,7 @@ namespace UDPServer
 
             while (true)
             {
-                var buffer = new byte[1600];
+                var buffer = new byte[512];
                 var size = 0;
                 var data = new StringBuilder();
                 EndPoint senderEndPoint = new IPEndPoint(IPAddress.Any, 0);
@@ -38,30 +40,43 @@ namespace UDPServer
                     data.Append(Encoding.UTF8.GetString(buffer));
                }
                while (udpSocket.Available > 0);
-                // TODO: threads? Retransmissions? limit nr of retries for retransmission
+
                try 
                {
-                    string msg = "Message received!";
-                    var client = new DiffieHellman();
-                   
-                    byte[] encryptedMessage = server.Encrypt(UDPClient.Program.clientPublicKey, msg);
+                    string request = data.ToString();
+                    string reqResponse;
+                    if (request.StartsWith("1922"))
+                    {
+                        reqResponse = "Password correct! \n Choose an operation to continue: \n 1. Verify balance     2. Extract money";
+                    }
+                    else
+                    {
+                        reqResponse = "Wrong password! Repeat operation.";
+                    }
 
+                    byte[] encryptedMessage = server.Encrypt(UDPClient.Program.clientPublicKey, reqResponse);
                     char[] sentMessage = Encoding.Unicode.GetChars(encryptedMessage);
+
                     udpSocket.SendTo(Encoding.UTF8.GetBytes(sentMessage), senderEndPoint);
-                    
-                    Thread.Sleep(50);
 
-                    Console.WriteLine("Received data: " + data);
-
-                   /* byte[] dataToByte = Encoding.ASCII.GetBytes(data.ToString());
+                    byte[] dataToByte = Encoding.ASCII.GetBytes(data.ToString());
                     string decryptedMessage = server.Decrypt(UDPClient.Program.ClientPublicKey, dataToByte, UDPClient.Program.ClientIV);
-                    Console.WriteLine("Decrypted data: " + decryptedMessage);*/
+                    Console.WriteLine("Received data: " + decryptedMessage);
+
+                    using (SHA256 sha256Hash = SHA256.Create())
+                    {
+                        string hash = ErrorChecking.GetHash(sha256Hash, data.ToString());
+
+                        if (!ErrorChecking.VerifyHash(sha256Hash, data.ToString(), hash))
+                        {
+                            Console.WriteLine("Errors while sending packets.");
+                        }
+                    }
 
                 }
                catch(SystemException e)
                {
-                    Console.WriteLine("Error while sending packets!" + e);
-                    Thread.Sleep(50);
+                    Console.WriteLine(e);
                }
             }
         }

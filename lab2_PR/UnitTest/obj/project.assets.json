@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Crc32.NET/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Crc32.NET.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Crc32.NET.dll": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -131,6 +143,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Crc32.NET": "1.2.0",
           "System.Security.Cryptography.Cng": "5.0.0",
           "lab2_PR": "1.0.0"
         },
@@ -145,6 +158,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Crc32.NET": "1.2.0",
           "System.Security.Cryptography.Cng": "5.0.0",
           "UDPClient": "1.0.0",
           "lab2_PR": "1.0.0"
@@ -159,6 +173,23 @@
     }
   },
   "libraries": {
+    "Crc32.NET/1.2.0": {
+      "sha512": "wNW/huzolu8MNKUnwCVKxjfAlCFpeI8AZVfF46iAWJ1+P6bTU1AZct7VAkDDEjgeeTJCVTkGZaD6jSd/fOiUkA==",
+      "type": "package",
+      "path": "crc32.net/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "crc32.net.1.2.0.nupkg.sha512",
+        "crc32.net.nuspec",
+        "lib/net20/Crc32.NET.dll",
+        "lib/net20/Crc32.NET.xml",
+        "lib/netstandard1.3/Crc32.NET.dll",
+        "lib/netstandard1.3/Crc32.NET.xml",
+        "lib/netstandard2.0/Crc32.NET.dll",
+        "lib/netstandard2.0/Crc32.NET.xml"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "type": "package",
@@ -614,20 +645,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UnitTest\\SecureKeyExchange.Tests.csproj",
+      "projectUniqueName": "E:\\repos\\PR\\lab2_PR\\UnitTest\\SecureKeyExchange.Tests.csproj",
       "projectName": "SecureKeyExchange.Tests",
-      "projectPath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UnitTest\\SecureKeyExchange.Tests.csproj",
+      "projectPath": "E:\\repos\\PR\\lab2_PR\\UnitTest\\SecureKeyExchange.Tests.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UnitTest\\obj\\",
+      "outputPath": "E:\\repos\\PR\\lab2_PR\\UnitTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -638,15 +674,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\lab2_PR\\lab2_PR.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\lab2_PR\\lab2_PR.csproj"
+            "E:\\repos\\PR\\lab2_PR\\lab2_PR\\lab2_PR.csproj": {
+              "projectPath": "E:\\repos\\PR\\lab2_PR\\lab2_PR\\lab2_PR.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UDPClient\\UDPClient.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UDPClient\\UDPClient.csproj"
+            "E:\\repos\\PR\\lab2_PR\\UDPClient\\UDPClient.csproj": {
+              "projectPath": "E:\\repos\\PR\\lab2_PR\\UDPClient\\UDPClient.csproj"
             },
-            "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UDPServer\\UDPServer.csproj": {
-              "projectPath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UDPServer\\UDPServer.csproj"
+            "E:\\repos\\PR\\lab2_PR\\UDPServer\\UDPServer.csproj": {
+              "projectPath": "E:\\repos\\PR\\lab2_PR\\UDPServer\\UDPServer.csproj"
             }
           }
         }
@@ -659,6 +696,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MSTest.TestFramework": {
             "target": "Package",
@@ -688,7 +726,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "aqmMJ+j3A47hyoFD/mLMwb+GGaBBJMV4C+ceY/0O+btiIHM9cgWPS0QgtXWi94Rkuu9hcqNcAu5oY9z4jnGHMA==",
+  "dgSpecHash": "dGxeqoLEwEgBHx3rO1Q/zsy/4vBP2y2QnFT9hSGifxglWfXsOIIkP4X/42j+eomvXjDtvNpJCnJrZbhA7g1Lvg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UnitTest\\SecureKeyExchange.Tests.csproj",
+  "projectFilePath": "E:\\repos\\PR\\lab2_PR\\UnitTest\\SecureKeyExchange.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\crc32.net\\1.2.0\\crc32.net.1.2.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\mstest.testframework\\2.1.2\\mstest.testframework.2.1.2.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",

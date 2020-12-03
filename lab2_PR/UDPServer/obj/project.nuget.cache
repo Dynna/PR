@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qXbfx17Jdj3XbaZEibQwWSXwJWD9n+gtE1Y7/yMcbJo8mDm+WaUQ+FCWoxhrqGtfHrCaRXye8xVbLpDQA/vkMA==",
+  "dgSpecHash": "4LuWBToChhkui0mzcOR1kI1XDMZcs0M7kSZWcuLEnjXYnk9yeFWZ0gmAhkIBRd0SA3bRyV+mijFVsxVLIB2OJA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\source\\repos\\PR\\lab2_PR\\UDPServer\\UDPServer.csproj",
+  "projectFilePath": "E:\\repos\\PR\\lab2_PR\\UDPServer\\UDPServer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\crc32.net\\1.2.0\\crc32.net.1.2.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512"
   ],

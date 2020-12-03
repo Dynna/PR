@@ -13,7 +13,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{30B79B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UDPClient", "..\UDPClient\UDPClient.csproj", "{D5EE304A-227C-4A50-8F0A-A8D1E4036C34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecureKeyExchange.Tests", "..\UnitTest\SecureKeyExchange.Tests.csproj", "{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecureKeyExchange.Tests", "..\UnitTest\SecureKeyExchange.Tests.csproj", "{86A65EE7-29ED-4780-AA29-31DABA6A1DA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ErrorChecking", "ErrorChecking", "{C27802CB-C5C6-499F-A912-5B140A1317F6}"
+	ProjectSection(SolutionItems) = preProject
+		ErrorChecking.cs = ErrorChecking.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ATM_Machine", "ATM_Machine", "{C798542E-0174-4DB6-9FA7-AE0E4483F23E}"
+	ProjectSection(SolutionItems) = preProject
+		AtmMachine.cs = AtmMachine.cs
+		AtmStateMachine.cs = AtmStateMachine.cs
+		HasDebitCardState.cs = HasDebitCardState.cs
+		NoDebitCardState.cs = NoDebitCardState.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
